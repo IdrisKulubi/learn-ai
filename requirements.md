@@ -1,4 +1,4 @@
-# Learn AI 
+# Project Requirements Document
 
 ## Project Overview
 The goal of this project is to create a personalized educational app that allows students to learn topics from their favorite characters or heroes. The app will:
