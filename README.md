@@ -1,89 +1,33 @@
-# Learn AI 
+# Personalized Educational App
 
-## Project Overview
-The goal of this project is to create a personalized educational app that allows students to learn topics from their favorite characters or heroes. The app will:
-
-- Allow students to upload an image of their chosen character.
-- Generate a 3D avatar or animated model of the character.
-- Enable the character to teach selected topics using AI-generated explanations and voice.
-- Provide real-time interaction with the character.
-- Save chat history for later review.
+Welcome to the **Learn AI** repository! This project aims to create an engaging and interactive learning platform where students can learn topics from their favorite characters or heroes. The app leverages AI, 3D avatars, and real-time interaction to provide a unique educational experience.
 
 ---
 
-## Functional Requirements
+## Features
 
-### 1. User Registration and Authentication
-- Users can sign up and log in using email or social media accounts.
-- Users can create and manage their profiles.
-
-### 2. Topic Selection
-- Users can select a topic or subject to learn (e.g., Java, Math, History).
-- Topics are categorized by grade level or difficulty.
-
-### 3. Character Selection and Avatar Generation
-- Users can upload an image of their favorite character.
-- The app generates a 3D avatar or animated model from the uploaded image.
-- Users can customize the avatar (e.g., clothing, accessories).
-
-### 4. AI-Powered Teaching
-- The app uses conversational AI to explain topics in a simple and engaging manner.
-- The AI responds to user questions in real-time.
-
-### 5. Voice Cloning and Text-to-Speech
-- The app generates a voice that mimics the character's voice.
-- The AI's explanations are converted into speech using text-to-speech (TTS).
-
-### 6. Lip-Syncing
-- The avatar's lip movements are synced with the generated audio.
-
-### 7. Real-Time Interaction
-- Users can interact with the avatar in real-time using a chat interface.
-- The avatar responds with gestures and facial expressions.
-
-### 8. Chat History
-- Conversations and lessons are saved for later review.
-- Users can revisit past lessons or continue where they left off.
-
-### 9. Gamification
-- Add quizzes, rewards, and progress tracking to keep users engaged.
+- **User Registration and Authentication**: Sign up and log in using email or social media accounts.
+- **Topic Selection**: Choose from a variety of topics categorized by grade level or difficulty.
+- **Character Selection and Avatar Generation**: Upload an image of your favorite character and generate a 3D avatar.
+- **AI-Powered Teaching**: Learn topics through AI-generated explanations and voice.
+- **Voice Cloning and Text-to-Speech**: Mimic the character's voice for a personalized experience.
+- **Lip-Syncing**: Sync the avatar's lip movements with the generated audio.
+- **Real-Time Interaction**: Chat with the avatar and receive real-time responses with gestures and facial expressions.
+- **Chat History**: Save conversations and lessons for later review.
+- **Gamification**: Engage with quizzes, rewards, and progress tracking.
 
 ---
 
-## Non-Functional Requirements
-
-### 1. Performance
-- The app should respond to user inputs within 2-3 seconds.
-- Real-time interactions should have minimal latency.
-
-### 2. Scalability
-- The app should handle up to 10,000 concurrent users.
-- The backend should scale horizontally to accommodate growth.
-
-### 3. Security
-- User data (e.g., images, chat history) should be encrypted.
-- The app should comply with data protection laws (e.g., GDPR, COPPA).
-
-### 4. Usability
-- The app should have an intuitive and user-friendly interface.
-- The app should be accessible on both mobile and desktop devices.
-
-### 5. Cost
-- Use open-source tools and APIs to minimize costs.
-- Optimize resource usage to reduce cloud hosting expenses.
-
----
-
-## Technical Requirements
+## Technologies Used
 
 ### Frontend
 - **Framework**: Next.js (for web) or React Native (for mobile).
-- **UI Library**: Shadcn UI,Tailwind Css
+- **UI Library**: Shadcn-UI and  Tailwind CSS.
 - **3D Rendering**: Three.js or Unity.
 
 ### Backend
 - **Framework**: Node.js with Express.js.
-- **Database**: Neon Db
+- **Database**: Neon Db.
 - **API Integration**: SSR.
 
 ### AI/ML Tools
@@ -95,84 +39,46 @@ The goal of this project is to create a personalized educational app that allows
 ### Cloud and Hosting
 - **Frontend Hosting**: Vercel (Next.js) or Expo (React Native).
 - **Backend Hosting**: Render, Heroku, or AWS.
-- **Storage**: Cloudflare R2 Storage for images and audio files.
+- **Storage**: Cloudeflare R2.
 
 ---
 
-## Development Steps
+## Getting Started
 
-### 1. Set Up the Backend
-- Create a Node.js server with Express.js.
-- Set up endpoints for:
-  - User authentication.
-  - Avatar generation.
-  - Voice cloning.
-  - Conversational AI.
-  - Chat history storage.
+### Prerequisites
+- Node.js (v16)
+- npm or yarn
+- MongoDB or Firebase account
+- API keys for AI/ML tools (if required)
 
-### 2. Set Up the Frontend
-- Create a Next.js or React Native app.
-- Build pages for:
-  - User registration and login.
-  - Topic selection.
-  - Avatar upload and customization.
-  - Learning interface with chat and avatar.
+### Installation
 
-### 3. Integrate AI/ML Tools
-- Use open-source models for:
-  - Conversational AI (LLaMA 2, Vicuna).
-  - Voice cloning (Coqui TTS, Tortoise TTS).
-  - Avatar generation (Stable Diffusion).
-  - Lip-syncing (Wav2Lip, SadTalker).
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/IdrisKulubi/learn-ai.git
+   cd learn-ai
+   ```
 
-### 4. Implement Real-Time Interaction
-- Use WebSockets or Socket.IO for real-time communication.
-- Sync the avatar's lip movements with the generated audio.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-### 5. Add Gamification
-- Implement quizzes and progress tracking.
-- Add rewards and badges for completing lessons.
+3. **Set up environment variables**:
+   ```bash
+   cp .env.example .env
+   ```
+   Fill in your environment variables in the `.env` file.
 
-### 6. Test and Optimize
-- Test the app for performance, usability, and security.
-- Optimize the AI models and backend for scalability.
+4. **Run the development server**:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-### 7. Deploy the App
-- Deploy the frontend on Vercel .
-- Deploy the backend on Render, Heroku, or AWS.
-
----
-
-## Timeline
-
-| Phase                  | Duration   | Deliverables                              |
-|------------------------|------------|-------------------------------------------|
-| Planning and Research  | 1 week     | Project plan, requirements document       |
-| Backend Development    | 2 weeks    | Node.js server, API endpoints             |
-| Frontend Development   | 2 weeks    | Next.js/React Native app, UI components   |
-| AI/ML Integration      | 3 weeks    | Conversational AI, voice cloning, lip-syncing |
-| Testing and Optimization | 1 week    | Bug fixes, performance optimization       |
-| Deployment             | 1 week     | Deployed app on Vercel, Render, etc.      |
-
----
-
-
-## Budget
-
-| Item                  | Cost          |
-|-----------------------|---------------|
-| Cloud Hosting         | $50/month     |
-| AI/ML Tools (Open-Source) | Free       |
-| Development Tools     | Free          |
-| **Total**             | Almost **$50/month** |
-
----
-
-## Risks and Mitigation
-
-| Risk                                  | Mitigation                                      |
-|---------------------------------------|-------------------------------------------------|
-| High latency in real-time interaction | Optimize AI models and use efficient APIs.      |
-| High cloud hosting costs              | Use free tiers and optimize resource usage.     |
-| Data privacy concerns                 | Encrypt user data and comply with GDPR.         |
+5. **Open your browser**:
+   Navigate to `http://localhost:3000` to see the app running.
 
