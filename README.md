@@ -1,6 +1,6 @@
 # Personalized Educational App
 
-Welcome to the **Learn AI** repository! This project aims to create an engaging and interactive learning platform where students can learn topics from their favorite characters or heroes. The app leverages AI, 3D avatars, and real-time interaction to provide a unique educational experience.
+Welcome to the **Learn AI** repository! This project aims to create an engaging and interactive learning platform where students can learn topics from their favorite characters or heroes. The app leverages AI, 3D avatars, and real-time interaction to provide a unique educational experience 
 
 ---
 
@@ -14,7 +14,7 @@ Welcome to the **Learn AI** repository! This project aims to create an engaging 
 - **Lip-Syncing**: Sync the avatar's lip movements with the generated audio.
 - **Real-Time Interaction**: Chat with the avatar and receive real-time responses with gestures and facial expressions.
 - **Chat History**: Save conversations and lessons for later review.
-- **Gamification**: Engage with quizzes, rewards, and progress tracking.
+- **Gamification**: Engage with quizzes, rewards, and progress tracking nd points tht cn be redemmed
 
 ---
 
