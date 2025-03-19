@@ -1,20 +1,44 @@
 'use client'
 import { Button } from '@/components/ui/button'
-import { SignInWithGoogle } from '@/lib/actions/user.actions'
-import { useFormStatus } from 'react-dom'
+import { useState } from 'react'
 import Image from 'next/image'
+import { signIn } from "next-auth/react";
 
 export default function GoogleSignUpForm() {
-  const SignUpButton = () => {
-    const { pending } = useFormStatus()
-    return (
+  const [isPending, setIsPending] = useState(false)
+  const [hasError, setHasError] = useState(false);
+
+  const handleGoogleSignUp = async () => {
+    try {
+      console.log("[CLIENT] Starting Google sign-up from client component");
+      setIsPending(true)
+      setHasError(false);
+      
+      // Use the client-side signIn function directly
+      // This is the recommended approach from NextAuth.js docs
+      await signIn("google", { 
+        callbackUrl: "/" 
+      });
+      
+      // Note: The code below will not execute because signIn causes a redirect
+      console.log("[CLIENT] Sign-up completed (unlikely to see this due to redirect)");
+    } catch (error) {
+      console.error("[CLIENT] Unexpected error during sign-up:", error);
+      setHasError(true);
+      setIsPending(false);
+    }
+  }
+
+  return (
+    <div className="space-y-3">
       <Button 
-        disabled={pending} 
-        className="w-full flex items-center justify-center gap-2 h-12 bg-white hover:bg-gray-50 text-gray-700 border border-gray-200" 
+        onClick={handleGoogleSignUp}
+        disabled={isPending} 
+        className="w-full flex items-center justify-center gap-2 h-12 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer r-pointer p-2 border border-gray-200" 
         variant="outline" 
         aria-label='sign up with google'
       >
-        {!pending && (
+        {!isPending && (
           <Image
             src="/assets/icons/google.svg"
             alt="Google"
@@ -22,13 +46,14 @@ export default function GoogleSignUpForm() {
             height={20}
           />
         )}
-        {pending ? 'Redirecting...' : 'Continue with Google'}
+        {isPending ? 'Redirecting...' : 'Continue with Google'}
       </Button>
-    )
-  }
-  return (
-    <form action={SignInWithGoogle}>
-      <SignUpButton />
-    </form>
+      
+      {hasError && (
+        <p className="text-red-500 text-sm text-center">
+          There was an error with Google sign-up. Please try again.
+        </p>
+      )}
+    </div>
   )
 } 

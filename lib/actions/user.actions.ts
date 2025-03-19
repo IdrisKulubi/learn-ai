@@ -21,12 +21,14 @@ export async function signInWithCredentials(
     }
   }
 
+// The Google sign-in function is not meant to be called directly from a client component
+// Instead, we'll use the client-side signIn function from 'next-auth/react'
 
-  export const SignInWithGoogle = async () => {
-    await signIn('google')
-  }
-
+// This server-side function is kept for reference but should not be used
+export const SignInWithGoogle = async () => {
+  throw new Error("This server action shouldn't be called directly from client components. Use the client-side signIn function from next-auth/react instead.")
+}
   
 export const SignOut = async () => {
-    await signOut()
-  }
+  await signOut()
+}

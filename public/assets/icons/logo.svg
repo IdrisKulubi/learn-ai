@@ -1,0 +1,47 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient Circle -->
+  <circle cx="64" cy="64" r="64" fill="url(#paint0_radial)" />
+  
+  <!-- Brain Neural Network Elements -->
+  <g opacity="0.9">
+    <!-- Neural Network Nodes -->
+    <circle cx="44" cy="35" r="4" fill="#60A5FA" />
+    <circle cx="64" cy="28" r="5" fill="#818CF8" />
+    <circle cx="84" cy="35" r="4" fill="#A78BFA" />
+    <circle cx="36" cy="55" r="4" fill="#34D399" />
+    <circle cx="92" cy="55" r="4" fill="#F472B6" />
+    <circle cx="44" cy="75" r="4" fill="#38BDF8" />
+    <circle cx="84" cy="75" r="4" fill="#F87171" />
+    <circle cx="64" cy="82" r="5" fill="#2DD4BF" />
+    <circle cx="64" cy="55" r="8" fill="#FFFFFF" />
+    
+    <!-- Neural Network Connections -->
+    <line x1="44" y1="35" x2="64" y2="28" stroke="#60A5FA" stroke-width="1" />
+    <line x1="64" y1="28" x2="84" y2="35" stroke="#818CF8" stroke-width="1" />
+    <line x1="44" y1="35" x2="36" y2="55" stroke="#34D399" stroke-width="1" />
+    <line x1="84" y1="35" x2="92" y2="55" stroke="#A78BFA" stroke-width="1" />
+    <line x1="36" y1="55" x2="44" y2="75" stroke="#34D399" stroke-width="1" />
+    <line x1="92" y1="55" x2="84" y2="75" stroke="#F472B6" stroke-width="1" />
+    <line x1="44" y1="75" x2="64" y2="82" stroke="#38BDF8" stroke-width="1" />
+    <line x1="84" y1="75" x2="64" y2="82" stroke="#F87171" stroke-width="1" />
+    <line x1="44" y1="35" x2="64" y2="55" stroke="#60A5FA" stroke-width="1.5" />
+    <line x1="84" y1="35" x2="64" y2="55" stroke="#A78BFA" stroke-width="1.5" />
+    <line x1="36" y1="55" x2="64" y2="55" stroke="#34D399" stroke-width="1.5" />
+    <line x1="92" y1="55" x2="64" y2="55" stroke="#F472B6" stroke-width="1.5" />
+    <line x1="44" y1="75" x2="64" y2="55" stroke="#38BDF8" stroke-width="1.5" />
+    <line x1="84" y1="75" x2="64" y2="55" stroke="#F87171" stroke-width="1.5" />
+    <line x1="64" y1="82" x2="64" y2="55" stroke="#2DD4BF" stroke-width="1.5" />
+  </g>
+  
+  <!-- Text - AI -->
+  <path d="M47 70L40 50H45L48.5 62L52 50H57L50 70H47Z" fill="white" />
+  <path d="M71 50H76V65H88V70H71V50Z" fill="white" />
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(64 64) rotate(90) scale(64)">
+      <stop offset="0" stop-color="#111827" />
+      <stop offset="1" stop-color="#1F2937" />
+    </radialGradient>
+  </defs>
+</svg> 

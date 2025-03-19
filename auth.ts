@@ -11,9 +11,9 @@ import { users } from './db/schema'
 
 export const config = {
   pages: {
-    signIn: '/auth/signin',
-    signOut: '/auth/signout',
-    error: '/auth/error',
+    signIn: '/sign-in',
+    signOut: '/sign-out',
+    error: '/sign-in',
   },
   session: {
     strategy: 'jwt',
