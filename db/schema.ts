@@ -137,7 +137,7 @@ export const studentProfiles = pgTable("student_profile", {
   userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
   username: text("username").notNull().unique(),
   grade: text("grade"),
-  ageGroup: text("age_group").$type<"5-7" | "8-10" | "11-13">(),
+  ageGroup: text("age_group").$type<"5-7" | "8-10" | "11-13" | "14-16" | "17-19" | "20-24">(),
   school: text("school"),
   avatarColor: text("avatar_color"),
   isCompleted: boolean("is_completed").default(false),

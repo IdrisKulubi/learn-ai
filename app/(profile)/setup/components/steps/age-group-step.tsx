@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 
 interface AgeGroupStepProps {
-  initialValue?: "5-7" | "8-10" | "11-13";
-  onUpdate: (value: "5-7" | "8-10" | "11-13") => void;
+  initialValue?: "5-7" | "8-10" | "11-13" | "14-16" | "17-19" | "20-24";
+  onUpdate: (value: "5-7" | "8-10" | "11-13" | "14-16" | "17-19" | "20-24") => void;
   onNext: () => void;
   onBack: () => void;
 }
@@ -36,12 +36,34 @@ const AGE_GROUPS = [
     icon: "🎓",
     animation: "rocket",
   },
+  {
+    value: "14-16" as const,
+    label: "Teen Innovators",
+    description: "Ages 14-16", 
+    icon: "🚀",
+    animation: "rocket",
+  },
+  {
+    value: "17-19" as const,
+    label: "Rising Stars",
+    description: "Ages 17-19",
+    icon: "⭐",
+    animation: "rocket",
+  },
+  {
+    value: "20-24" as const,
+    label: "Knowledge Seekers", 
+    description: "Ages 20-24",
+    icon: "🎯",
+    animation: "rocket",
+  },
+
 ];
 
 export default function AgeGroupStep({ initialValue, onUpdate, onNext, onBack }: AgeGroupStepProps) {
-  const [ageGroup, setAgeGroup] = useState<"5-7" | "8-10" | "11-13" | undefined>(initialValue);
+  const [ageGroup, setAgeGroup] = useState<"5-7" | "8-10" | "11-13" | "14-16" | "17-19" | "20-24" | undefined>(initialValue);
   
-  const handleSelect = (value: "5-7" | "8-10" | "11-13") => {
+  const handleSelect = (value: "5-7" | "8-10" | "11-13" | "14-16" | "17-19" | "20-24") => {
     setAgeGroup(value);
     onUpdate(value);
     
@@ -57,7 +79,7 @@ export default function AgeGroupStep({ initialValue, onUpdate, onNext, onBack }:
         spread: 70,
         origin: { y: 0.6 }
       });
-    }
+        }
   };
   
   const handleContinue = () => {

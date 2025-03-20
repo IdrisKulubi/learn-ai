@@ -32,7 +32,7 @@ export const studentProfileSchema = z.object({
       message: "Username can only contain letters, numbers, emoji, underscores and hyphens" 
     }),
   grade: z.string().min(1, { message: "Please select your grade" }),
-  ageGroup: z.enum(["5-7", "8-10", "11-13"], { 
+  ageGroup: z.enum(["5-7", "8-10", "11-13", "14-16", "17-19", "20-24"], { 
     required_error: "Please select your age bracket" 
   }),
   school: z.string().optional(),
