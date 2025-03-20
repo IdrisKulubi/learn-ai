@@ -130,3 +130,17 @@ export const userProgress = pgTable("user_progress", {
   averageScore: integer("average_score").default(0),
   lastActivity: timestamp("last_activity", { mode: "date" }).defaultNow(),
 });
+
+// Student profiles for the educational platform
+export const studentProfiles = pgTable("student_profile", {
+  id: serial("id").primaryKey(),
+  userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  username: text("username").notNull().unique(),
+  grade: text("grade"),
+  ageGroup: text("age_group").$type<"5-7" | "8-10" | "11-13">(),
+  school: text("school"),
+  avatarColor: text("avatar_color"),
+  isCompleted: boolean("is_completed").default(false),
+  createdAt: timestamp("created_at", { mode: "date" }).defaultNow().notNull(),
+  updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow().notNull(),
+});
