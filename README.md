@@ -9,7 +9,7 @@ Welcome to the **Learn AI** repository! This project aims to create an engaging 
 - **User Registration and Authentication**: Sign up and log in using email or social media accounts.
 - **Topic Selection**: Choose from a variety of topics categorized by grade level or difficulty.
 - **Character Selection and Avatar Generation**: Upload an image of your favorite character and generate a 3D avatar.
-- **AI-Powered Teaching**: Learn topics through AI-generated explanations and voice.
+- **AI-Powered Teaching**: Learn topics through AI-generated explanations and voice.might use azure tools ,not sure
 - **Voice Cloning and Text-to-Speech**: Mimic the character's voice for a personalized experience.
 - **Lip-Syncing**: Sync the avatar's lip movements with the generated audio.
 - **Real-Time Interaction**: Chat with the avatar and receive real-time responses with gestures and facial expressions.
