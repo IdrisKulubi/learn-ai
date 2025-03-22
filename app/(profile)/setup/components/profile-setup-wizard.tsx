@@ -12,6 +12,7 @@ import ProfilePreviewStep from "./steps/profile-preview-step";
 import { StudentProfileFormData } from "@/lib/validator";
 import { createStudentProfile } from "@/lib/actions/profile.actions";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const TOTAL_STEPS = 5;
 
@@ -19,6 +20,7 @@ export default function ProfileSetupWizard() {
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<Partial<StudentProfileFormData>>({});
+  const router = useRouter();
 
   const progress = (step / TOTAL_STEPS) * 100;
 
@@ -47,8 +49,10 @@ export default function ProfileSetupWizard() {
       
       toast.success("Your awesome profile has been created! Let's start learning!");
       
-      // Redirect to dashboard or home page
-      window.location.href = "/";
+      // Redirect to the dashboard
+      setTimeout(() => {
+        router.push("/dashboard");
+      }, 1500);
     } catch (error) {
       console.error("Error creating profile:", error);
       toast.error("Oops! Something went wrong. Please try again.");

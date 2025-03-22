@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { ModeToggle } from "@/components/themes/theme-toggle";
 
 export default function Home() {
   return (
@@ -13,12 +14,13 @@ export default function Home() {
       <div className="space-y-4">
         <Link href="/setup">
           <Button 
-            className="flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white"
+            className="flex items-center cursor-pointer gap-2 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white"
             size="lg"
           >
             Create Your Profile <ArrowRight className="h-4 w-4" />
           </Button>
         </Link>
+        <ModeToggle/>
       </div>
     </main>
   );

@@ -5,15 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1742220703665,
-      "tag": "0000_spooky_stature",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1742488801241,
-      "tag": "0001_handy_masked_marvel",
+      "when": 1742645386896,
+      "tag": "0000_furry_slyde",
       "breakpoints": true
     }
   ]
