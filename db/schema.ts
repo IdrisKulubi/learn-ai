@@ -71,6 +71,38 @@ export const topics = pgTable("topic", {
   updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow().notNull(),
 });
 
+// Lessons table for storing individual learning content
+export const lessons = pgTable("lesson", {
+  id: serial("id").primaryKey(),
+  topicId: integer("topic_id").references(() => topics.id, { onDelete: "cascade" }),
+  title: text("title").notNull(),
+  description: text("description").notNull(),
+  content: json("content"), // JSON for lesson content structure
+  category: text("category").notNull(), // e.g., math, science, coding
+  difficulty: text("difficulty").$type<"beginner" | "intermediate" | "advanced">().notNull(),
+  gradeLevel: text("grade_level").notNull(), // e.g., "1-2", "3-5"
+  estimatedTime: text("estimated_time").notNull(), // e.g., "15 minutes"
+  emoji: text("emoji"), // Emoji representing the lesson
+  coverImage: text("cover_image"), // Optional cover image URL
+  isPublished: boolean("is_published").default(false),
+  createdAt: timestamp("created_at", { mode: "date" }).defaultNow().notNull(),
+  updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow().notNull(),
+});
+
+// Track student progress through lessons
+export const lessonProgress = pgTable("lesson_progress", {
+  id: serial("id"),
+  userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  lessonId: integer("lesson_id").notNull().references(() => lessons.id, { onDelete: "cascade" }),
+  status: text("status").$type<"not_started" | "in_progress" | "completed">().default("not_started"),
+  progress: integer("progress").default(0), // Percentage of completion (0-100)
+  startedAt: timestamp("started_at", { mode: "date" }),
+  completedAt: timestamp("completed_at", { mode: "date" }),
+  lastActivityAt: timestamp("last_activity_at", { mode: "date" }).defaultNow(),
+}, (table) => ({
+  pk: primaryKey({ columns: [table.userId, table.lessonId] })
+}));
+
 export const characters = pgTable("character", {
   id: serial("id").primaryKey(),
   userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
