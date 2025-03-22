@@ -14,7 +14,7 @@ Welcome to the **Learn AI** repository! This project aims to create an engaging 
 - **Lip-Syncing**: Sync the avatar's lip movements with the generated audio.
 - **Real-Time Interaction**: Chat with the avatar and receive real-time responses with gestures and facial expressions.
 - **Chat History**: Save conversations and lessons for later review.
-- **Gamification**: Engage with quizzes, rewards, and progress tracking nd points tht cn be redemmed
+- **Gamification**: Engage with quizzes, rewards, and progress tracking nd points that can be redemmed for anything
 
 ---
 
