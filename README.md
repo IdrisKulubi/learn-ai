@@ -1,12 +1,12 @@
 # Personalized Educational App
 
-Welcome to the **Learn AI** repository! This project aims to create an engaging and interactive learning platform where students can learn topics from their favorite characters or heroes. The app leverages AI, 3D avatars, and real-time interaction to provide a unique educational experience 
+Welcome to the **Learn AI** repository This project aims to create an engaging and interactive learning platform where students can learn topics from their favorite characters or heroes. The app leverages AI, 3D avatars, and real-time interaction to provide a unique educational experience 
 
 ---
 
 ## Features
 
-- **User Registration and Authentication**: Sign up and log in using email or social media accounts.
+- **User Registration and Authentication**: Sign up and log in using email and google .
 - **Topic Selection**: Choose from a variety of topics categorized by grade level or difficulty.
 - **Character Selection and Avatar Generation**: Upload an image of your favorite character and generate a 3D avatar.
 - **AI-Powered Teaching**: Learn topics through AI-generated explanations and voice.might use azure tools ,not sure
