@@ -9,11 +9,6 @@ import { ActivitySection } from "./components/activity-section";
 import { RecommendedLessons } from "./components/recommended-lessons";
 import db from "@/db/drizzle";
 
-export const metadata = {
-  title: "Student Dashboard | AI Learning Platform",
-  description: "View your progress and find new lessons to continue your learning journey",
-};
-
 export default async function DashboardPage() {
   const session = await auth();
   
@@ -74,13 +69,13 @@ export default async function DashboardPage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link 
               href="/lessons/explore" 
-              className="bg-primary hover:bg-primary/90 text-white rounded-lg px-6 py-3 text-center font-medium inline-flex items-center justify-center"
+              className="bg-primary hover:bg-primary/90 dark:bg-primary/90 text-white rounded-lg px-6 py-3 text-center font-medium inline-flex items-center justify-center"
             >
               Find New Lessons
             </Link>
             <Link 
               href="/lessons/continue" 
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-lg px-6 py-3 text-center font-medium inline-flex items-center justify-center"
+              className="bg-secondary hover:bg-secondary/90 dark:bg-secondary/90 text-secondary-foreground rounded-lg px-6 py-3 text-center font-medium inline-flex items-center justify-center"
             >
               Continue Learning
             </Link>
