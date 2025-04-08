@@ -40,7 +40,7 @@ export default function GoogleSignUpForm() {
       >
         {!isPending && (
           <Image
-            src="/assets/icons/google.svg"
+            src="/google.svg"
             alt="Google"
             width={20}
             height={20}
