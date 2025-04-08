@@ -23,7 +23,6 @@ export default async function SignInPage({ searchParams }: SignInPageProps) {
   const session = await auth();
   const params = await searchParams;
   const callbackUrl = params?.callbackUrl;
-  const referralCode = params?.ref;
 
   if (session) {
     return redirect(callbackUrl || "/");
@@ -69,19 +68,7 @@ export default async function SignInPage({ searchParams }: SignInPageProps) {
             </p>
           </div>
 
-          {referralCode && (
-            <div className="overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 p-4 rounded-lg text-center border border-purple-500/30 transition-all duration-500 ease-in-out transform translate-y-0 opacity-0 animate-slideUp delay-200">
-                <p className="text-sm font-medium text-gray-300 mb-1">
-                  <span className="text-blue-400">✨</span> You were referred by a friend <span className="text-blue-400">✨</span>
-                </p>
-                <p className="text-xs text-gray-400 italic">
-                  Use your Strathmore email to claim your referral bonus
-                </p>
-                <div className="mt-2 w-16 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto transform animate-pulse"></div>
-              </div>
-            </div>
-          )}
+         
         </CardHeader>
 
         <CardContent className="space-y-8 pb-10">
