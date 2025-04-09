@@ -49,7 +49,7 @@ export default async function SignInPage({ searchParams }: SignInPageProps) {
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-violet-600 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
               <div className="relative flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-violet-600 rounded-full overflow-hidden border-2 border-white/20">
                 <Image
-                  src="/logo.svg"
+                  src="/assets/icons/logo.svg"
                   width={64}
                   height={64}
                   alt={APP_NAME}
