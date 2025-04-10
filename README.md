@@ -1,7 +1,7 @@
 # Personalized Educational App
 
 Welcome to the **Learn AI** repository This project aims to create an engaging and interactive learning platform where students can learn topics from their favorite characters or heroes. The app leverages AI, 3D avatars, and real-time interaction to provide a unique educational experience 
-
+that the students will always remember.
 ---
 
 ## Features
